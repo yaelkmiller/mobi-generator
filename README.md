@@ -9,3 +9,9 @@ Usage
 Only tested to work on a local host runnning on Windows.
 
 kindlegen.exe must be downloaded from Amazon (http://amzn.to/12hBwRV) and placed into the other-people folder.
+
+Remember to check your MOBI file in Amazon's Kindle Previewer.
+
+Credits
+==
+Thanks to Derek Tor, Eylem Ozaslan, and Randall Frisk from Coding Dojo for their advice.
