@@ -3,7 +3,8 @@ Mobi Generator
 
 Run Amazon's KindleGen on a web page — no command line — and convert your files into MOBI format so it's ready to upload to Kindle.
 
-== Usage
+Usage
+==
 
 Only tested to work on a local host runnning on Windows.
 
