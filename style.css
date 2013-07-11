@@ -1,0 +1,64 @@
+@import url("bootstrap.min.css");
+
+body {
+	padding-top: 10px;
+	padding-bottom: 40px;
+	background-color: #FCFCFC;
+  	font-family: Georgia, Times New Roman, serif;
+  	font-size: 16px;
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+label {
+	font-size: 16px;
+}
+
+.logline {
+	font-size: 18px;
+}
+
+.fix {
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+	padding: 2px 4px 10px 45px;
+	margin-bottom: 8px;
+	margin-right: 200px;
+	margin-left: -50px;
+}
+
+.legal-link {
+	color: #B94A48;
+}
+
+.console {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.up-carrot {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.container {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+}
+
+#legal p {
+	font-size: 12px;
+	line-height: 15px;
+}
+
+
+
