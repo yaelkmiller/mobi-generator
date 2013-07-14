@@ -3,7 +3,7 @@ License
 
 KindleGen and Kindle Previewer are copyrighted by Amazon.
 
-I have no affiliation with Amazon beyond being self-published authors on KDP and/or customers of Amazon.
+I have no affiliation with Amazon beyond being self-published authors on KDP and customer of Amazon.
 
 I make no guarantees that Amazon will accept MOBI files produced by this tool.
 
