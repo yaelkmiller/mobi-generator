@@ -3,7 +3,7 @@ License
 
 KindleGen and Kindle Previewer are copyrighted by Amazon.
 
-With the exception of the elements copyrighted by Amazon, the rest of the code may be used however you like.  If you ever run into me and want to buy me a beer, that would be appreciated. 
+With the exception of the elements copyrighted by third-parties (Amazon, Twitter, jQuery, etc.), the rest of the code may be used however you like.  If you ever run into me and want to buy me a beer, that would be appreciated. 
 
 I have no affiliation with Amazon beyond being self-published authors on KDP and customer of Amazon.
 
