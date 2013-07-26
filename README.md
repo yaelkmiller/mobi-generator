@@ -12,6 +12,8 @@ kindlegen.exe must be downloaded from Amazon (http://amzn.to/12hBwRV) and placed
 
 Remember to check your MOBI file in Amazon's Kindle Previewer.
 
+You get an "image is not valid" message even if your image is valid if the file size is too large for upload settings. To change your upload settings, go to your php.ini and increase "upload_max_filesize" to at least 10M.
+
 Credits
 ==
 Thanks to Derek Tor, Eylem Ozaslan, and Randall Frisk from Coding Dojo for their advice.
