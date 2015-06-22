@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title>MOBI Generator</title>
 		<link rel="stylesheet" href="style.css">
-		<script src="jquery-1.10.1.min.js"></script>
+		<script src="jquery-1.11.3.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#add-image1-row").hide();
@@ -50,34 +50,34 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="span12">
+				<div>
 					<h1 id="page-title">MOBI Generator</h1>
 				</div> <!-- title span -->
 			</div> <!-- title row -->
 			<div class="row">
-				<div class="span10 offset1">
+				<div class="col-md-10 col-md-offset-1">
 					<p class="logline">Run Amazon's KindleGen right here &mdash; no command line &mdash; and convert your files into MOBI format so it's ready to upload to Kindle.</p>
 				</div> <!-- intro span -->
 			</div> <!-- intro row -->
 			<div class="row">
-				<div class="span10 offset1">
+				<div class="col-md-10 col-md-offset-1">
 					<p>Remember to check your MOBI file in Amazon's Kindle Previewer. <a href="#legal" class="legal-link">Legal Notices</a></p>
 				</div> <!-- Kindle Previewer span -->
 			</div> <!-- Kindle Previewer row -->
 			<div class="hide-stuff">
 				<div class="row">
-					<div class="span10 offset1">
+					<div class="col-md-10 col-md-offset-1">
 						<h3>Upload your files below so they can be converted:</h3>
 					</div> <!-- upload text span -->
 				</div> <!-- upload text row -->
-				<div class="span5 offset3">
+				<div class="col-md-4 col-md-offset-1">
 					<?php if (isset($_SESSION["errors"])) {
 	             			foreach ($_SESSION["errors"] as $error) {
 	                			echo $error;
 	            			}
 	          			} ?>
 				</div>
-				<div id="upload-form" class="span6 offset4">
+				<div id="upload-form" class="col-md-6 col-md-offset-4">
 					<form action="process.php" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="action" value="upload" />
 						<input type="hidden" name="time" value="<?php echo date('Y-m-d-H-i-s'); ?>" />
@@ -168,7 +168,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="span4 offset4">
+			<div class="col-md-4 col-md-offset-4">
 				<?php
 				if(isset($_SESSION["mobi"])) {
 					$new_mobi = str_replace('\\', '/', $_SESSION['mobi']);
@@ -178,7 +178,7 @@
 			</div> <!-- console span -->
 		</div> <!-- console row -->
 		<hr>
-		<footer id="legal" class="span10 offset1">
+		<footer id="legal" class="col-md-10 col-md-offset-1">
 			<p><a href="#page-title" class="up-carrot">&#94;</a>&nbsp;KindleGen and Kindle Previewer are copyrighted by Amazon.</p>
 			<p>We have no affiliation with Amazon beyond being self-published authors on KDP and customers of Amazon.</p>
 			<p>We make no guarantees that Amazon will accept MOBI files produced by this tool.</p>

@@ -20,32 +20,32 @@ function reArrayFiles(&$file_post) {
 
 function upload_action() {
 	if($_FILES["userfile"]["type"][0] != "text/html") {
-		$_SESSION["errors"]["ebook-html"] = "<div class='alert alert-error'>Your main ebook .html file is not valid.
+		$_SESSION["errors"]["ebook-html"] = "<div class='alert alert-danger'>Your main ebook .html file is not valid.
              </div>";
 	}
 	if($_FILES["userfile"]["type"][1] != "text/html") {
-		$_SESSION["errors"]["toc-html"] = "<div class='alert alert-error'>Your table of contents .html file is not valid.
+		$_SESSION["errors"]["toc-html"] = "<div class='alert alert-danger'>Your table of contents .html file is not valid.
          </div>";
 	}
 	if(pathinfo($_FILES["userfile"]["name"][2], PATHINFO_EXTENSION) != "ncx") {
-		$_SESSION["errors"]["toc-ncx"] = "<div class='alert alert-error'>Your table of contents .ncx file is not valid.
+		$_SESSION["errors"]["toc-ncx"] = "<div class='alert alert-danger'>Your table of contents .ncx file is not valid.
          </div>";
 
 	}
 	if(pathinfo($_FILES["userfile"]["name"][3], PATHINFO_EXTENSION) != "opf") {
-		$_SESSION["errors"]["ebook-opf"] = "<div class='alert alert-error'>Your ebook .opf file is not valid.
+		$_SESSION["errors"]["ebook-opf"] = "<div class='alert alert-danger'>Your ebook .opf file is not valid.
      </div>";
 	}
 	if($_FILES["userfile"]["type"][4] != "image/jpeg" && $_FILES["userfile"]["type"][4] != "image/tiff") {
-		$_SESSION["errors"]["cover-image"] = "<div class='alert alert-error'>Your cover image file is not valid.
+		$_SESSION["errors"]["cover-image"] = "<div class='alert alert-danger'>Your cover image file is not valid.
      </div>";
 	}
 	if($_FILES["userfile"]["type"][5] != '' && $_FILES["userfile"]["type"][5] != "image/jpeg" && $_FILES["userfile"]["type"][5] != "image/tiff") {
-		$_SESSION["errors"]["add-image1"] = "<div class='alert alert-error'>Your image file is not valid.
+		$_SESSION["errors"]["add-image1"] = "<div class='alert alert-danger'>Your image file is not valid.
      </div>";
 	}
 	if($_FILES["userfile"]["type"][6] != '' && $_FILES["userfile"]["type"][6] != "image/jpeg" && $_FILES["userfile"]["type"][6] != "image/tiff") {
-		$_SESSION["errors"]["add-image2"] = "<div class='alert alert-error'>Your image file is not valid.
+		$_SESSION["errors"]["add-image2"] = "<div class='alert alert-danger'>Your image file is not valid.
      </div>";
 	}
 	if (empty($_SESSION["errors"])) {
