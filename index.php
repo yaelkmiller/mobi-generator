@@ -8,30 +8,57 @@
 		<script src="jquery-1.11.3.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				$("#add-css1-row").hide();
+				$("#add-css2-row").hide();
+				$("#add-css-button").click(function() {
+					$("#add-css1-row").show();
+					$("#add-css2-row").show();
+				});
 				$("#add-image1-row").hide();
 				$("#add-image2-row").hide();
 				$("#add-image-button").click(function() {
 					$("#add-image1-row").show();
 					$("#add-image2-row").show();
 				});
-				var error1 = <?php if(isset($_SESSION["errors"]["add-image1"])){
+				var error1= <?php if(isset($_SESSION["errors"]["add-css1"])){
 					echo "true";
 				}
 				else {
 					echo "false";
 				} ?>;
-				if( error1 == true)
+				if(error1 == true)
+				{
+					$("#add-css1-row").show();
+					$("#add-css2-row").show();
+				}
+				var error2 = <?php if(isset($_SESSION["errors"]["add-css2"])){
+					echo "true";
+				}
+				else {
+					echo "false";
+				} ?>;
+				if(error2 == true){
+					$("#add-css1-row").show();
+					$("#add-css2-row").show();
+				}
+				var error3 = <?php if(isset($_SESSION["errors"]["add-image1"])){
+					echo "true";
+				}
+				else {
+					echo "false";
+				} ?>;
+				if(error3 == true)
 				{
 					$("#add-image1-row").show();
 					$("#add-image2-row").show();
 				}
-				var error2 = <?php if(isset($_SESSION["errors"]["add-image2"])){
+				var error4 = <?php if(isset($_SESSION["errors"]["add-image2"])){
 					echo "true";
 				}
 				else {
 					echo "false";
 				} ?>;
-				if( error1 == true){
+				if(error4 == true){
 					$("#add-image1-row").show();
 					$("#add-image2-row").show();
 				}
@@ -117,9 +144,16 @@
 									<label for="ebook-opf">Ebook .opf file:</label>
 									<input name="userfile[]" type="file" class="upload-file" id="ebook-opf" /><br />
 						</div> <!-- opf file row --><br/>
-						<div class="row">
-							
-						</div> <!-- more images -->
+							<?php if (isset($_SESSION["errors"]["ebook-css"])) {
+	              			echo "<div class='row fix'>";
+	            		}
+	            		else {
+	              			echo "<div class='row'>";
+	            		} ?>
+									<label for="ebook-css">Ebook .css file:</label>
+									<input name="userfile[]" type="file" class="upload-file" id="ebook-css" /><br />
+						</div> <!-- css file row -->
+
 						<?php if (isset($_SESSION["errors"]["cover-image"])) {
 	              			echo "<div class='row fix'>";
 	            		}
@@ -129,6 +163,28 @@
 									<label for="cover-image">Book cover image:</label>
 									<input name="userfile[]" type="file" class="upload-file" id="cover-image" /><br /><br/>
 						</div> <!-- cover image file row -->
+						<div class="row">
+							<button class="btn btn-primary" id="add-css-button" type="button">Add More Stylesheets</button>
+						</div> <!-- add button row -->
+						<?php if (isset($_SESSION["errors"]["add-css1"])) {
+	              			echo "<div class='row fix' id='add-css1-row'>";
+	            		}
+	            		else {
+	              			echo "<div class='row'id='add-css1-row'>";
+	            		} ?>
+							<label for="add-css1" id="add-css1-label">Additional Stylesheet:</label>
+							<input name="userfile[]" type="file" class="upload-file" id="add-css1" />
+						</div> <!-- additional css 1 -->
+						<?php if (isset($_SESSION["errors"]["add-css2"])) {
+	              			echo "<div class='row fix' id='add-css2-row'>";
+	            		}
+	            		else {
+	              			echo "<div class='row'id='add-css2-row'>";
+	            		} ?>
+							<label for="add-css2" id="add-css2-label">Additional Stylesheet:</label>
+							<input name="userfile[]" type="file" class="upload-file" id="add-css2" />
+						</div> <!-- additional css 2 -->
+						<br/>
 						<div class="row">
 							<button class="btn btn-primary" id="add-image-button" type="button">Add More Images</button>
 						</div> <!-- add button row -->
@@ -149,7 +205,7 @@
 	            		} ?>
 							<label for="add-image2" id="add-image2-label">Additional Image:</label>
 							<input name="userfile[]" type="file" class="upload-file" id="add-image2" />
-						</div> <!-- additional image 1 -->
+						</div> <!-- additional image 2 -->
 						<br/><div class="row">
 						<input type="submit" value="Upload" class="btn btn-success btn-large" multiple="multiple" />
 					</div> <!-- upload button -->

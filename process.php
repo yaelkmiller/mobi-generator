@@ -36,15 +36,27 @@ function upload_action() {
 		$_SESSION["errors"]["ebook-opf"] = "<div class='alert alert-danger'>Your ebook .opf file is not valid.
      </div>";
 	}
-	if($_FILES["userfile"]["type"][4] != "image/jpeg" && $_FILES["userfile"]["type"][4] != "image/tiff") {
+	if($_FILES["userfile"]["type"][4] != "text/css") {
+		$_SESSION["errors"]["ebook-css"] = "<div class='alert alert-danger'>Your ebook .css file is not valid.
+         </div>";
+	}
+	if($_FILES["userfile"]["type"][5] != "image/jpeg" && $_FILES["userfile"]["type"][5] != "image/tiff") {
 		$_SESSION["errors"]["cover-image"] = "<div class='alert alert-danger'>Your cover image file is not valid.
      </div>";
 	}
-	if($_FILES["userfile"]["type"][5] != '' && $_FILES["userfile"]["type"][5] != "image/jpeg" && $_FILES["userfile"]["type"][5] != "image/tiff") {
+	if($_FILES["userfile"]["type"][6] != '' && $_FILES["userfile"]["type"][6] != "text/css")  {
+		$_SESSION["errors"]["add-css1"] = "<div class='alert alert-danger'>Your css file is not valid.
+     </div>";
+	}
+	if($_FILES["userfile"]["type"][7] != '' && $_FILES["userfile"]["type"][7] != "text/css")  {
+		$_SESSION["errors"]["add-css2"] = "<div class='alert alert-danger'>Your css file is not valid.
+     </div>";
+	}
+	if($_FILES["userfile"]["type"][8] != '' && $_FILES["userfile"]["type"][8] != "image/jpeg" && $_FILES["userfile"]["type"][8] != "image/tiff") {
 		$_SESSION["errors"]["add-image1"] = "<div class='alert alert-danger'>Your image file is not valid.
      </div>";
 	}
-	if($_FILES["userfile"]["type"][6] != '' && $_FILES["userfile"]["type"][6] != "image/jpeg" && $_FILES["userfile"]["type"][6] != "image/tiff") {
+	if($_FILES["userfile"]["type"][9] != '' && $_FILES["userfile"]["type"][9] != "image/jpeg" && $_FILES["userfile"]["type"][9] != "image/tiff") {
 		$_SESSION["errors"]["add-image2"] = "<div class='alert alert-danger'>Your image file is not valid.
      </div>";
 	}
